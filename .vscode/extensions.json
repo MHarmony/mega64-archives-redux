@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "Angular.ng-template",
+    "ms-azuretools.vscode-docker",
+    "EditorConfig.EditorConfig",
+    "dbaeumer.vscode-eslint",
+    "firsttris.vscode-jest-runner",
+    "christian-kohler.npm-intellisense",
+    "nrwl.angular-console",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "VisualStudioExptTeam.intellicode-api-usage-examples",
+    "VisualStudioExptTeam.vscodeintellicode-completions",
+    "Prisma.prisma"
+  ]
+}

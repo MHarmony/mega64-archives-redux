@@ -1,0 +1,57 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "prettier.ignorePath": "${workspaceFolder}/.prettierignore",
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.experimental.asyncTokenization": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.maxColumn": 80,
+  "editor.wordWrapColumn": 80,
+  "files.autoGuessEncoding": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.templating": true,
+  "html.format.wrapLineLength": 80,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "less.format.spaceAroundSelectorSeparator": true,
+  "scss.format.spaceAroundSelectorSeparator": true,
+  "npm.packageManager": "pnpm",
+  "eslint.format.enable": true,
+  "eslint.packageManager": "pnpm",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.bracketSameLine": true,
+  "javascript.format.semicolons": "insert",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.suggest.paths": false,
+  "typescript.format.semicolons": "insert",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.suggest.paths": false,
+  "angular.forceStrictTemplates": true,
+  "intellicodeCompletions.language.javascript": true,
+  "intellicodeCompletions.language.typescript": true,
+  "[javascript]": {
+    "editor.codeActionsOnSave": [
+      "source.organizeImports",
+      "source.formatDocument",
+      "source.fixAll.eslint"
+    ]
+  },
+  "[typescript]": {
+    "editor.codeActionsOnSave": [
+      "source.organizeImports",
+      "source.formatDocument",
+      "source.fixAll.eslint"
+    ]
+  },
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
+}
