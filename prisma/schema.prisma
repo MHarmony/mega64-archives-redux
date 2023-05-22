@@ -3,9 +3,21 @@
 
 generator client {
   provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model Video {
+  id        Int      @id @unique @default(autoincrement()) @db.SmallInt
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updateAt  DateTime @updatedAt @db.Timestamptz()
+}
+
+enum Role {
+  USER
+  ADMIN
 }
