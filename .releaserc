@@ -1,0 +1,34 @@
+{
+  "branches": [
+    "main"
+  ],
+  "repositoryUrl": "https://github.com/MHarmony/mega64-archives-redux",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    "@semantic-release/github",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json",
+          "pnpm-lock.yaml",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(api,api-e2e,common,ui,ui-e2e): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ]
+}
