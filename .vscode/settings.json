@@ -20,7 +20,6 @@
   "scss.format.spaceAroundSelectorSeparator": true,
   "npm.packageManager": "pnpm",
   "eslint.format.enable": true,
-  "eslint.packageManager": "pnpm",
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
@@ -50,8 +49,5 @@
       "source.fixAll.eslint"
     ]
   },
-  "npm-intellisense.packageSubfoldersIntellisense": true,
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  }
+  "npm-intellisense.packageSubfoldersIntellisense": true
 }

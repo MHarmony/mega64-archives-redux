@@ -7,4 +7,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/libs/common',
+  coverageReporters: ['text', 'html', 'json', 'json-summary'],
 };

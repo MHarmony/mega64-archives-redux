@@ -1,24 +1,20 @@
-import { NestFactory } from '@nestjs/core';
-
-import compression from '@fastify/compress';
-import helmet from '@fastify/helmet';
-import { ValidationPipe, VersioningType } from '@nestjs/common';
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
-} from '@nestjs/platform-fastify';
+import { ValidationPipe } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { NestApplication, NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { SentryService } from '@ntegral/nestjs-sentry';
+import compression from 'compression';
+import helmet from 'helmet';
 import { AppModule } from './app/app.module';
-import { PrismaService } from './prisma/prisma.service';
 
+/**
+ * Bootstraps the application.
+ */
 async function bootstrap() {
-  const app = await NestFactory.create<NestFastifyApplication>(
-    AppModule,
-    new FastifyAdapter({ logger: true })
-  );
-  const prismaService = app.get(PrismaService);
-  await prismaService.enableShutdownHooks(app);
+  const app = await NestFactory.create<NestApplication>(AppModule, {
+    cors: true,
+  });
+  const configService = app.get(ConfigService);
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -28,28 +24,23 @@ async function bootstrap() {
       whitelist: true,
     })
   );
-
   app.useLogger(SentryService.SentryServiceInstance());
-
-  await app.register(helmet, {
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: [`'self'`],
-        styleSrc: [`'self'`, `'unsafe-inline'`],
-        imgSrc: [`'self'`, 'data:', 'validator.swagger.io'],
-        scriptSrc: [`'self'`, `https: 'unsafe-inline'`],
-      },
-    },
-  });
-
-  await app.register(compression);
-
-  app.enableVersioning({
-    type: VersioningType.URI,
-    defaultVersion: '1',
-  });
+  app.use(helmet());
+  app.use(compression());
 
   const config = new DocumentBuilder()
+    .addBearerAuth(
+      {
+        bearerFormat: 'JWT',
+        description: 'Enter a valid JWT token',
+        in: 'header',
+        name: 'jwt',
+        scheme: 'bearer',
+        type: 'http',
+      },
+      'jwt'
+    )
+    .setContact('MHarmony', 'https://mharmony.io', 'contact@mharmony.io')
     .setTitle('Mega64 Archives Redux API')
     .setDescription('Mega64 Archives Redux API documentation.')
     .setVersion('1.0')
@@ -58,7 +49,7 @@ async function bootstrap() {
 
   SwaggerModule.setup('docs', app, document);
 
-  await app.listen(3000);
+  await app.listen(configService.get<number>('port', { infer: true }));
 }
 
 bootstrap();

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4191446385572602911" datatype="html">
+        <source>Mega64 Logo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8686476056343645301" datatype="html">
+        <source>Home icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5463495657001790378" datatype="html">
+        <source>Messages icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6452372740127749380" datatype="html">
+        <source>Messages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">231</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2034443988654747604" datatype="html">
+        <source>Settings icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4930506384627295710" datatype="html">
+        <source>Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3983656167714659590" datatype="html">
+        <source>Profile icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4915431133669985304" datatype="html">
+        <source>Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2038981898574930846" datatype="html">
+        <source>User settings icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5338805589342356534" datatype="html">
+        <source>User Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7579167720266738550" datatype="html">
+        <source>Sign out icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="935790816200474922" datatype="html">
+        <source>Sign Out</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1388903157408573617" datatype="html">
+        <source>User Avatar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5483243100849522447" datatype="html">
+        <source>Expand icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8349518222306912015" datatype="html">
+        <source>Hamburger menu icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5346280762190187179" datatype="html">
+        <source>Search icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4580988005648117665" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6140928843514634447" datatype="html">
+        <source>Ellipsis icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="799485662157076328" datatype="html">
+        <source>Inbox</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">214</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4076344669296371604" datatype="html">
+        <source>Messages alert icon</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">apps/ui/src/app/app.component.html</context>
+          <context context-type="linenumber">228</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

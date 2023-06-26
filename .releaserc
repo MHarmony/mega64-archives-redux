@@ -27,7 +27,7 @@
           "pnpm-lock.yaml",
           "CHANGELOG.md"
         ],
-        "message": "chore(api,api-e2e,common,ui,ui-e2e): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        "message": "chore(api,common,ui,ui-e2e): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]
   ]

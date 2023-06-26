@@ -1,1 +1,264 @@
-<router-outlet />
+<div class="min-h-screen flex surface-ground">
+  <nav
+    id="app-sidebar"
+    class="bg-bluegray-800 h-screen hidden lg:block flex-shrink-0 absolute lg:static left-0 top-0 z-1 select-none">
+    <div class="flex flex-column h-full">
+      <div
+        id="mega64-logo-container"
+        class="flex align-items-center px-5 bg-bluegray-900 flex-shrink-0">
+        <img
+          ngSrc="assets/img/mega64-logo.png"
+          i18n-alt
+          alt="Mega64 Logo"
+          height="30"
+          width="90"
+          priority />
+      </div>
+
+      <div class="overflow-y-auto mt-3">
+        <ul class="list-none p-3 m-0">
+          <li>
+            <a
+              routerLink="/"
+              pRipple
+              class="flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors">
+              <i
+                class="pi pi-home mr-2"
+                role="img"
+                aria-label="Home icon"
+                i18n-aria-label></i>
+
+              <span i18n class="font-medium">Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              routerLink="/messages"
+              pRipple
+              class="flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors">
+              <i
+                class="pi pi-comments mr-2"
+                role="img"
+                aria-label="Messages icon"
+                i18n-aria-label></i>
+
+              <span i18n class="font-medium">Messages</span>
+
+              <span
+                id="message-count"
+                class="inline-flex align-items-center justify-content-center ml-auto bg-yellow-500 text-bluegray-900 border-circle">
+                3
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              routerLink="/settings"
+              pRipple
+              class="flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors">
+              <i
+                class="pi pi-cog mr-2"
+                role="img"
+                aria-label="Settings icon"
+                i18n-aria-label></i>
+
+              <span i18n class="font-medium">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mt-auto">
+        <hr class="mb-3 mx-3 border-top-1 border-none border-bluegray-600" />
+
+        <ul
+          class="list-none p-2 m-0 hidden origin-bottom animation-duration-150 overflow-hidden animation-ease-in-out">
+          <li>
+            <a
+              routerLink="/profile"
+              pRipple
+              class="flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors">
+              <i
+                class="pi pi-user mr-2"
+                role="img"
+                aria-label="Profile icon"
+                i18n-aria-label></i>
+
+              <span i18n class="font-medium">Profile</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              routerLink="/profile/settings"
+              pRipple
+              class="flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors">
+              <i
+                class="pi pi-cog mr-2"
+                role="img"
+                aria-label="User settings icon"
+                i18n-aria-label></i>
+
+              <span i18n class="font-medium">User Settings</span>
+            </a>
+          </li>
+
+          <li>
+            <div
+              (click)="signOut()"
+              pRipple
+              class="flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors">
+              <i
+                class="pi pi-sign-out mr-2"
+                role="img"
+                aria-label="Sign out icon"
+                i18n-aria-label></i>
+
+              <span i18n class="font-medium">Sign Out</span>
+            </div>
+          </li>
+        </ul>
+
+        <div
+          pRipple
+          class="m-3 px-3 py-2 flex align-items-center hover:bg-bluegray-900 border-round cursor-pointer text-bluegray-100 hover:text-bluegray-50 transition-duration-150 transition-colors"
+          pStyleClass="@prev"
+          enterClass="hidden"
+          enterActiveClass="slidedown"
+          leaveToClass="hidden"
+          leaveActiveClass="slideup">
+          <img
+            ngSrc="assets/img/mega64-logo.png"
+            class="mr-2"
+            i18n-alt
+            alt="User Avatar"
+            width="28"
+            height="28" />
+
+          <span class="font-medium">{{ currentUser?.name }}</span>
+
+          <i
+            class="pi pi-chevron-up ml-auto"
+            role="img"
+            aria-label="Expand icon"
+            i18n-aria-label></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="min-h-screen flex flex-column relative flex-auto">
+    <div
+      id="search-bar-container"
+      class="flex justify-content-between align-items-center px-5 surface-section shadow-2 relative lg:static border-bottom-1 surface-border">
+      <div class="flex">
+        <div
+          pRipple
+          class="cursor-pointer inline-flex align-items-center justify-content-center lg:hidden text-700 mr-3"
+          pStyleClass="#app-sidebar"
+          enterClass="hidden"
+          enterActiveClass="fadeinleft"
+          leaveToClass="hidden"
+          leaveActiveClass="fadeoutleft"
+          [hideOnOutsideClick]="true">
+          <i
+            class="pi pi-bars text-4xl"
+            role="img"
+            aria-label="Hamburger menu icon"
+            i18n-aria-label></i>
+        </div>
+
+        <span class="p-input-icon-left">
+          <i
+            class="pi pi-search"
+            role="img"
+            aria-label="Search icon"
+            i18n-aria-label></i>
+
+          <input
+            type="text"
+            pInputText
+            class="border-none w-10rem sm:w-20rem"
+            placeholder="Search"
+            i18n-placeholder />
+        </span>
+      </div>
+
+      <div
+        pRipple
+        class="cursor-pointer block lg:hidden text-700"
+        pStyleClass="@next"
+        enterClass="hidden"
+        enterActiveClass="fadein"
+        leaveToClass="hidden"
+        leaveActiveClass="fadeout"
+        [hideOnOutsideClick]="true">
+        <i
+          class="pi pi-ellipsis-v text-2xl"
+          role="img"
+          aria-label="Ellipsis icon"
+          i18n-aria-label></i>
+      </div>
+
+      <ul
+        class="list-none p-0 m-0 hidden lg:flex lg:align-items-center select-none lg:flex-row surface-section border-1 lg:border-none surface-border right-0 top-100 z-1 shadow-2 lg:shadow-none absolute lg:static">
+        <li>
+          <a
+            routerLink="/inbox"
+            pRipple
+            class="flex p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors">
+            <i class="pi pi-inbox text-base lg:text-2xl mr-2 lg:mr-0"></i>
+
+            <span i18n class="block lg:hidden font-medium">Inbox</span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            routerLink="/messages"
+            pRipple
+            class="flex p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors">
+            <i
+              class="pi pi-bell text-base lg:text-2xl mr-2 lg:mr-0"
+              pBadge
+              severity="danger"
+              role="img"
+              aria-label="Messages alert icon"
+              i18n-aria-label></i>
+
+            <span i18n class="block lg:hidden font-medium">Messages</span>
+          </a>
+        </li>
+
+        <li class="border-top-1 surface-border lg:border-top-none">
+          <a
+            routerLink="/profile"
+            pRipple
+            class="flex p-3 lg:px-3 lg:py-2 align-items-center hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors">
+            <img
+              ngSrc="assets/img/mega64-logo.png"
+              class="mr-3 lg:mr-0"
+              width="32"
+              height="32" />
+
+            <div class="block lg:hidden">
+              <div class="text-900 font-medium">{{ currentUser?.name }}</div>
+
+              <span class="text-600 font-medium text-sm">
+                {{ currentUser?.email }}
+              </span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="p-5 flex flex-column flex-auto">
+      <main class="surface-section flex-auto">
+        <router-outlet />
+      </main>
+    </div>
+  </div>
+</div>

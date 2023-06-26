@@ -38,8 +38,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Custom Files
+# User added
 migrations.json
-.env
-
+.env*
+documentation
 .angular

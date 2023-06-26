@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'primeng/resources/themes/lara-dark-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css';
+@import 'primeflex/primeflex.min.css';
+@import '@videogular/ngx-videogular/fonts/videogular.css';
+
+body {
+  margin: 0px;
+  font-family: var(--font-family);
+}
+
+a {
+  text-decoration: none;
+}

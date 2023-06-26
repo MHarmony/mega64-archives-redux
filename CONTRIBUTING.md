@@ -1,4 +1,4 @@
-# Contributing to mega64-archives-redux
+# Contributing to Mega64 Archives Redux
 
 This file contains information about reporting issues as well as contributing code. Make sure
 you read our [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md) before you start participating.
@@ -121,12 +121,12 @@ from the main (upstream) repository:
 
 ## <a name="development"></a> Development Setup
 
-You will need [Node.js](https://nodejs.org).
+You will need [Node.js](https://nodejs.org), [pnpm](https://pnpm.io), and [PostgreSQL](https://www.postgresql.org).
 
 1. After cloning the repo, run:
 
-```bash
-$ pnpm install
+```shell
+pnpm install
 ```
 
 ## <a name="rules"></a> Coding Rules
@@ -140,6 +140,16 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 We have very precise rules over how our git commit messages can be formatted. This leads to **more
 readable messages** that are easy to follow when looking through the **project history**. But also,
 we use the git commit messages to **generate the mega64-archives-redux change log**.
+
+## Using commitizen
+
+First, [setup a GPG key with GitHub](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key):
+
+To create a formatted commit with commitizen, run:
+
+```shell
+pnpm run commit
+```
 
 ### Commit Message Format
 
@@ -195,7 +205,6 @@ The scope should have the name of the project affected (as perceived by person r
 The following is the list of supported scopes:
 
 - **api**: for changes made on `apps/api` directory
-- **api-e2e**: for changes made on `apps/api-e2e-` directory
 - **common**: for changes made on `libs/common` directory
 - **ui**: for changes made on `libs/ui` directory
 - **ui-e2e**: for changes made on `apps/ui-e2e` directory
