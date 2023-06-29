@@ -43,3 +43,6 @@ migrations.json
 .env*
 documentation
 .angular
+coverage.ps1
+codecov.exe
+.dccache

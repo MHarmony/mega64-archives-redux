@@ -1,9 +1,10 @@
+[![CI](https://img.shields.io/github/actions/workflow/status/MHarmony/mega64-archives-redux/ci.yml)](https://github.com/MHarmony/mega64-archives-redux/actions/workflows/ci.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/MHarmony/mega64-archives-redux)](https://app.codecov.io/gh/MHarmony/mega64-archives-redux)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli)
 [![License](https://img.shields.io/github/license/MHarmony/mega64-archives-redux.svg)](https://opensource.org/licenses/MIT)
-[![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/MHarmony/mega64-archives-redux)](https://snyk.io)
-[![CI](https://img.shields.io/github/actions/workflow/status/MHarmony/mega64-archives-redux/ci.yml)](https://github.com/MHarmony/mega64-archives-redux/actions/workflows/ci.yml)
+[![Known Vulnerabilities](https://snyk.io/test/github/MHarmony/mega64-archives-redux/badge.svg)](https://snyk.io/test/github/MHarmony/mega64-archives-redux)
 
 # Description
 
