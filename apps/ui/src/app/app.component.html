@@ -8,8 +8,8 @@
         class="flex align-items-center px-5 bg-bluegray-900 flex-shrink-0">
         <img
           ngSrc="assets/img/mega64-logo.png"
+          alt="Mega64 logo"
           i18n-alt
-          alt="Mega64 Logo"
           height="30"
           width="90"
           priority />
@@ -101,7 +101,7 @@
                 aria-label="User settings icon"
                 i18n-aria-label></i>
 
-              <span i18n class="font-medium">User Settings</span>
+              <span i18n class="font-medium">User settings</span>
             </a>
           </li>
 
@@ -132,10 +132,11 @@
           <img
             ngSrc="assets/img/mega64-logo.png"
             class="mr-2"
+            alt="User avatar"
             i18n-alt
-            alt="User Avatar"
-            width="28"
-            height="28" />
+            width="45"
+            height="15"
+            priority="true" />
 
           <span class="font-medium">{{ currentUser?.name }}</span>
 
@@ -178,9 +179,10 @@
             i18n-aria-label></i>
 
           <input
+            pInputText
             type="text"
             pInputText
-            class="border-none w-10rem sm:w-20rem"
+            class="border-blue-300 w-10rem sm:w-20rem"
             placeholder="Search"
             i18n-placeholder />
         </span>
@@ -208,6 +210,8 @@
           <a
             routerLink="/inbox"
             pRipple
+            aria-label="Inbox link"
+            i18n-aria-label
             class="flex p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors">
             <i class="pi pi-inbox text-base lg:text-2xl mr-2 lg:mr-0"></i>
 
@@ -219,6 +223,8 @@
           <a
             routerLink="/messages"
             pRipple
+            aria-label="Messages link"
+            i18n-aria-label
             class="flex p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors">
             <i
               class="pi pi-bell text-base lg:text-2xl mr-2 lg:mr-0"
@@ -236,12 +242,17 @@
           <a
             routerLink="/profile"
             pRipple
+            aria-label="Profile link"
+            i18n-aria-label
             class="flex p-3 lg:px-3 lg:py-2 align-items-center hover:surface-100 font-medium border-round cursor-pointer transition-duration-150 transition-colors">
             <img
               ngSrc="assets/img/mega64-logo.png"
               class="mr-3 lg:mr-0"
-              width="32"
-              height="32" />
+              width="45"
+              height="15"
+              alt="User avatar"
+              i18n-alt
+              priority="true" />
 
             <div class="block lg:hidden">
               <div class="text-900 font-medium">{{ currentUser?.name }}</div>

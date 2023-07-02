@@ -9,6 +9,8 @@
     "nrwl.angular-console",
     "christian-kohler.path-intellisense",
     "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "redhat.vscode-xml",
     "VisualStudioExptTeam.vscodeintellicode",
     "VisualStudioExptTeam.intellicode-api-usage-examples",
     "VisualStudioExptTeam.vscodeintellicode-completions"

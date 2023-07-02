@@ -15,21 +15,49 @@
         "main": "apps/ui/src/main.ts",
         "polyfills": ["zone.js", "@angular/localize/init"],
         "tsConfig": "apps/ui/tsconfig.app.json",
-        "assets": ["apps/ui/src/favicon.ico", "apps/ui/src/assets"],
+        "assets": [
+          "apps/ui/src/favicon.ico",
+          "apps/ui/src/assets",
+          "apps/ui/src/sitemap.xml",
+          "apps/ui/src/robots.txt",
+          "apps/ui/src/manifest.webmanifest"
+        ],
         "styles": ["apps/ui/src/styles.scss"],
         "scripts": [],
         "i18nMissingTranslation": "error",
-        "localize": ["en-US"]
+        "localize": ["en-US"],
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/ui/ngsw-config.json"
       },
       "configurations": {
         "production": {
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "fileReplacements": [
+            {
+              "replace": "apps/ui/src/environments/environment.ts",
+              "with": "apps/ui/src/environments/environment.ts"
+            }
+          ]
         },
         "development": {
           "buildOptimizer": false,
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "fileReplacements": [
+            {
+              "replace": "apps/ui/src/environments/environment.ts",
+              "with": "apps/ui/src/environments/environment.development.ts"
+            }
+          ]
+        },
+        "test": {
+          "fileReplacements": [
+            {
+              "replace": "apps/ui/src/environments/environment.ts",
+              "with": "apps/ui/src/environments/environment.ts"
+            }
+          ]
         },
         "es": {
           "localize": ["es"]

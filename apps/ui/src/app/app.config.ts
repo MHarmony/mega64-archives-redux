@@ -10,7 +10,9 @@ import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
 } from '@angular/router';
+import { provideServiceWorker } from '@angular/service-worker';
 import { TraceService, createErrorHandler } from '@sentry/angular-ivy';
+import { environment } from '../environments/environment';
 import { appRoutes } from './app.routes';
 
 /**
@@ -39,5 +41,9 @@ export const appConfig: ApplicationConfig = {
       deps: [TraceService],
       multi: true,
     },
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerImmediately',
+    }),
   ],
 };

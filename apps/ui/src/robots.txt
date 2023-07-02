@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://mega64.io/sitemap.xml

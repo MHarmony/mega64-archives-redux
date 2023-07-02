@@ -2,8 +2,8 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="es" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="4191446385572602911" datatype="html">
-        <source>Mega64 Logo</source>
+      <trans-unit id="7551329659164721541" datatype="html">
+        <source>Mega64 logo</source>
         <target>Logotipo de Mega64</target>
       </trans-unit>
       <trans-unit id="8686476056343645301" datatype="html">
@@ -42,8 +42,8 @@
         <source>User settings icon</source>
         <target>Icono de configuración de usuario</target>
       </trans-unit>
-      <trans-unit id="5338805589342356534" datatype="html">
-        <source>User Settings</source>
+      <trans-unit id="6153797048311741939" datatype="html">
+        <source>User settings</source>
         <target>Configuración de usuario</target>
       </trans-unit>
       <trans-unit id="7579167720266738550" datatype="html">
@@ -51,11 +51,11 @@
         <target>Icono de cerrar sesión</target>
       </trans-unit>
       <trans-unit id="935790816200474922" datatype="html">
-        <source>Sign Out</source>
+        <source>Sign out</source>
         <target>Desconectar</target>
       </trans-unit>
-      <trans-unit id="1388903157408573617" datatype="html">
-        <source>User Avatar</source>
+      <trans-unit id="257646668732476177" datatype="html">
+        <source>User avatar</source>
         <target>Avatar de usuario</target>
       </trans-unit>
       <trans-unit id="5483243100849522447" datatype="html">
@@ -78,13 +78,25 @@
         <source>Ellipsis icon</source>
         <target>Icono de puntos suspensivos</target>
       </trans-unit>
+      <trans-unit id="6868675968279273942" datatype="html">
+        <source>Inbox link</source>
+        <target>Enlace de la bandeja de entrada</source>
+      </trans-unit>
       <trans-unit id="799485662157076328" datatype="html">
         <source>Inbox</source>
         <target>Bandeja de entrada</target>
       </trans-unit>
+      <trans-unit id="6743762738468887716" datatype="html">
+        <source>Messages link</source>
+        <target>Enlace de mensajes</target>
+      </trans-unit>
       <trans-unit id="4076344669296371604" datatype="html">
         <source>Messages alert icon</source>
         <target>Icono de alerta de mensajes</target>
+      </trans-unit>
+      <trans-unit id="2821281008967146165" datatype="html">
+        <source>Profile link</source>
+        <target>Enlace de perfil</target>
       </trans-unit>
     </body>
   </file>

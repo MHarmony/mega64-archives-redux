@@ -6,9 +6,10 @@ import {
 } from '@sentry/angular-ivy';
 import { AppComponent } from './app/app.component';
 import { appConfig } from './app/app.config';
+import { environment } from './environments/environment';
 
 init({
-  dsn: process.env['SENTRY_DSN'],
+  dsn: environment.sentry.dsn,
   integrations: [
     new BrowserTracing({
       // eslint-disable-next-line @typescript-eslint/no-unused-vars

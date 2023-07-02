@@ -49,5 +49,8 @@
       "source.fixAll.eslint"
     ]
   },
-  "npm-intellisense.packageSubfoldersIntellisense": true
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  }
 }
