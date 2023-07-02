@@ -22,7 +22,7 @@
   "eslint.format.enable": true,
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
+  "prettier.trailingComma": "all",
   "prettier.bracketSameLine": true,
   "javascript.format.semicolons": "insert",
   "javascript.preferences.importModuleSpecifier": "relative",
