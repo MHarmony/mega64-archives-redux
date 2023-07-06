@@ -15,6 +15,6 @@ export default new DataSource({
   port: 5432,
   synchronize: true,
   type: 'postgres',
-  username: 'mega64archivesredux_test',
+  username: 'mega64_archives_redux_test',
   useUTC: true,
 });

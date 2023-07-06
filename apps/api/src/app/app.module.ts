@@ -25,7 +25,7 @@ import { UsersModule } from '../users/users.module';
   imports: [
     ConfigModule.forRoot({
       cache: true,
-      envFilePath: ['.env.development', '.env.test', '.env'],
+      envFilePath: ['.env.development', '.env.testing', '.env'],
       isGlobal: true,
       load: [configuration],
       validationOptions: {

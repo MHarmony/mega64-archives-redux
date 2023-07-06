@@ -1,3 +1,6 @@
+/**
+ * Development environment variables.
+ */
 export const environment = {
   production: false,
   sentry: {
