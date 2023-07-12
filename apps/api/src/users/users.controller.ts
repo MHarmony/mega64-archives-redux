@@ -243,7 +243,7 @@ export class UsersController {
   @Patch(':id')
   public async update(
     @Param('id') id: string,
-    @Body() updateUserDto: UpdateUserDto
+    @Body() updateUserDto: UpdateUserDto,
   ): Promise<User> {
     return this.usersService.update(+id, updateUserDto);
   }

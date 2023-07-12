@@ -19,7 +19,7 @@ export class CommentsService {
    */
   public constructor(
     @InjectRepository(Comment)
-    private readonly commentsRepository: Repository<Comment>
+    private readonly commentsRepository: Repository<Comment>,
   ) {}
 
   /**
@@ -57,7 +57,7 @@ export class CommentsService {
 
     if (!foundComment) {
       throw new NotFoundException(
-        `The comment with content ${content} was not found.`
+        `The comment with content ${content} was not found.`,
       );
     }
 
@@ -94,7 +94,7 @@ export class CommentsService {
    */
   public async update(
     id: number,
-    updateCommentDto: UpdateCommentDto
+    updateCommentDto: UpdateCommentDto,
   ): Promise<Comment> {
     const foundComment = await this.findOneById(id);
 

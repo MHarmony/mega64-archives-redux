@@ -115,7 +115,7 @@ describe('RepliesService', () => {
   describe('when finding a reply by content', () => {
     it('should throw an exception if the content cannot be found', async () => {
       expect(repliesService.findOneByContent('reeee')).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 
@@ -133,7 +133,7 @@ describe('RepliesService', () => {
       });
 
       expect(repliesService.update(-1, updateReplyDto)).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 

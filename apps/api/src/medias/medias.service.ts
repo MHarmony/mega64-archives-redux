@@ -19,7 +19,7 @@ export class MediasService {
    */
   public constructor(
     @InjectRepository(Media)
-    private readonly mediasRepository: Repository<Media>
+    private readonly mediasRepository: Repository<Media>,
   ) {}
 
   /**
@@ -57,7 +57,7 @@ export class MediasService {
 
     if (!foundMedia) {
       throw new NotFoundException(
-        `The media with title ${title} was not found.`
+        `The media with title ${title} was not found.`,
       );
     }
 
@@ -94,7 +94,7 @@ export class MediasService {
    */
   public async update(
     id: number,
-    updateMediaDto: UpdateMediaDto
+    updateMediaDto: UpdateMediaDto,
   ): Promise<Media> {
     const foundMedia = await this.findOneById(id);
 

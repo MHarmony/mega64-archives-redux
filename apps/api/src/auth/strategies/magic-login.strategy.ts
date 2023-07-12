@@ -20,7 +20,7 @@ export class MagicLoginStrategy extends PassportStrategy(Strategy) {
    */
   public constructor(
     private readonly authService: AuthService,
-    private readonly configService: ConfigService
+    private readonly configService: ConfigService,
   ) {
     super({
       callbackUrl: configService.get<string>('auth.callbackUrl', {
@@ -34,14 +34,14 @@ export class MagicLoginStrategy extends PassportStrategy(Strategy) {
       secret: configService.get<string>('auth.secret', { infer: true }),
       sendMagicLink: async (destination: string, href: string) => {
         console.log(
-          `Sending a magic link to ${destination} with the url ${href}`
+          `Sending a magic link to ${destination} with the url ${href}`,
         );
       },
       verify: async (
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         payload: any,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        callback: any
+        callback: any,
       ) => callback(null, this.validate(payload)),
     });
   }

@@ -37,7 +37,7 @@ export class MediasService {
    */
   public async findOneById(id: number): Promise<Comment> {
     return firstValueFrom(
-      this.httpClient.get<Comment>(`/api/medias/byId/${id}`)
+      this.httpClient.get<Comment>(`/api/medias/byId/${id}`),
     );
   }
 
@@ -50,7 +50,7 @@ export class MediasService {
    */
   public async findOneByTitle(title: string): Promise<Comment> {
     return firstValueFrom(
-      this.httpClient.get<Comment>(`/api/medias/byTitle/${title}`)
+      this.httpClient.get<Comment>(`/api/medias/byTitle/${title}`),
     );
   }
 
@@ -64,7 +64,7 @@ export class MediasService {
    */
   public async update(id: number, updateMediaDto: UpdateMedia): Promise<Media> {
     return firstValueFrom(
-      this.httpClient.patch<Media>(`/api/medias/${id}`, updateMediaDto)
+      this.httpClient.patch<Media>(`/api/medias/${id}`, updateMediaDto),
     );
   }
 

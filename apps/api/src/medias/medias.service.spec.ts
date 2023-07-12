@@ -78,7 +78,7 @@ describe('MediasService', () => {
   describe('when finding a media by title', () => {
     it('should throw an exception if the title cannot be found', async () => {
       expect(mediasService.findOneByTitle('reeee')).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 
@@ -98,7 +98,7 @@ describe('MediasService', () => {
       });
 
       expect(mediasService.update(-1, updateMediaDto)).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 

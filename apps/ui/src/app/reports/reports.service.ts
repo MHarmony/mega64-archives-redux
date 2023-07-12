@@ -28,7 +28,7 @@ export class ReportsService {
    */
   public async create(createReportDto: CreateReport): Promise<Report> {
     return firstValueFrom(
-      this.httpClient.post<Report>('/api/reports', createReportDto)
+      this.httpClient.post<Report>('/api/reports', createReportDto),
     );
   }
 
@@ -50,7 +50,7 @@ export class ReportsService {
    */
   public async findOneByGuid(guid: string): Promise<Report> {
     return firstValueFrom(
-      this.httpClient.get<Report>(`/api/reports/byGuid/${guid}`)
+      this.httpClient.get<Report>(`/api/reports/byGuid/${guid}`),
     );
   }
 
@@ -63,7 +63,7 @@ export class ReportsService {
    */
   public async findOneById(id: number): Promise<Report> {
     return firstValueFrom(
-      this.httpClient.get<Report>(`/api/reports/byId/${id}`)
+      this.httpClient.get<Report>(`/api/reports/byId/${id}`),
     );
   }
 
@@ -77,10 +77,10 @@ export class ReportsService {
    */
   public async update(
     id: number,
-    updateReportDto: UpdateReport
+    updateReportDto: UpdateReport,
   ): Promise<Report> {
     return firstValueFrom(
-      this.httpClient.patch<Report>(`/api/reports/${id}`, updateReportDto)
+      this.httpClient.patch<Report>(`/api/reports/${id}`, updateReportDto),
     );
   }
 

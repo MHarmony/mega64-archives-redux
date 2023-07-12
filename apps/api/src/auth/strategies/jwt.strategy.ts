@@ -20,7 +20,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
    */
   public constructor(
     private readonly authService: AuthService,
-    private readonly configService: ConfigService
+    private readonly configService: ConfigService,
   ) {
     super({
       ignoreExpiration: false,

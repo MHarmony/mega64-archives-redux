@@ -77,7 +77,7 @@ export class CommentsController {
   @UseGuards(AuthGuard('jwt'))
   @Post()
   public async create(
-    @Body() createCommentDto: CreateCommentDto
+    @Body() createCommentDto: CreateCommentDto,
   ): Promise<Comment> {
     return this.commentsService.create(createCommentDto);
   }
@@ -150,7 +150,7 @@ export class CommentsController {
   @UseGuards(AuthGuard('jwt'))
   @Get('/byContent/:content')
   public async findOneByContent(
-    @Param('content') content: string
+    @Param('content') content: string,
   ): Promise<Comment> {
     return this.commentsService.findOneByContent(content);
   }
@@ -256,7 +256,7 @@ export class CommentsController {
   @Patch(':id')
   public async update(
     @Param('id') id: string,
-    @Body() updateCommentDto: UpdateCommentDto
+    @Body() updateCommentDto: UpdateCommentDto,
   ): Promise<Comment> {
     return this.commentsService.update(+id, updateCommentDto);
   }

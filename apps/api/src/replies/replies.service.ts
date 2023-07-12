@@ -19,7 +19,7 @@ export class RepliesService {
    */
   public constructor(
     @InjectRepository(Reply)
-    private readonly repliesRepository: Repository<Reply>
+    private readonly repliesRepository: Repository<Reply>,
   ) {}
 
   /**
@@ -63,7 +63,7 @@ export class RepliesService {
 
     if (!foundReply) {
       throw new NotFoundException(
-        `The reply with content ${content} was not found.`
+        `The reply with content ${content} was not found.`,
       );
     }
 
@@ -103,7 +103,7 @@ export class RepliesService {
    */
   public async update(
     id: number,
-    updateReplyDto: UpdateReplyDto
+    updateReplyDto: UpdateReplyDto,
   ): Promise<Reply> {
     const foundReply = await this.findOneById(id);
 

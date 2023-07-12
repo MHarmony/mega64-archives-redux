@@ -28,7 +28,7 @@ export class FavoritesService {
    */
   public async create(createFavoriteDto: CreateFavorite): Promise<Comment> {
     return firstValueFrom(
-      this.httpClient.post<Comment>('/api/favorites', createFavoriteDto)
+      this.httpClient.post<Comment>('/api/favorites', createFavoriteDto),
     );
   }
 
@@ -50,7 +50,7 @@ export class FavoritesService {
    */
   public async findOneById(id: number): Promise<Comment> {
     return firstValueFrom(
-      this.httpClient.get<Comment>(`/api/favorites/byId/${id}`)
+      this.httpClient.get<Comment>(`/api/favorites/byId/${id}`),
     );
   }
 

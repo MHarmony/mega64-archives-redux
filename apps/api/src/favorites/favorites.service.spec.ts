@@ -102,7 +102,7 @@ describe('FavoritesService', () => {
   describe('when finding a favorite by id', () => {
     it('should throw an exception if the id cannot be found', async () => {
       expect(favoritesService.findOneById(-1)).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 

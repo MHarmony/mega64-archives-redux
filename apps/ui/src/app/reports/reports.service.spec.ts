@@ -102,7 +102,7 @@ describe('ReportsService', () => {
       .then((report) => expect(report).toEqual(mockReport));
 
     const req = httpTestingController.expectOne(
-      `/api/reports/byGuid/${mockReport.guid}`
+      `/api/reports/byGuid/${mockReport.guid}`,
     );
 
     expect(req.request.method).toEqual('GET');

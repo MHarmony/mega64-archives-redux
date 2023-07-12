@@ -254,7 +254,7 @@ export class MediasController {
   @Patch(':id')
   public async update(
     @Param('id') id: string,
-    @Body() updateMediaDto: UpdateMediaDto
+    @Body() updateMediaDto: UpdateMediaDto,
   ): Promise<Media> {
     return this.mediasService.update(+id, updateMediaDto);
   }

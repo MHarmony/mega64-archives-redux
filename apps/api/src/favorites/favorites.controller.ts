@@ -75,7 +75,7 @@ export class FavoritesController {
   @UseGuards(AuthGuard('jwt'))
   @Post()
   public async create(
-    @Body() createFavoriteDto: CreateFavoriteDto
+    @Body() createFavoriteDto: CreateFavoriteDto,
   ): Promise<Favorite> {
     return this.favoritesService.create(createFavoriteDto);
   }

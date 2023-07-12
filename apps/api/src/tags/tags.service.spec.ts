@@ -92,7 +92,7 @@ describe('TagsService', () => {
   describe('when finding a tag by content', () => {
     it('should throw an exception if the content cannot be found', async () => {
       expect(tagsService.findOneByContent('reeee')).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 
@@ -110,7 +110,7 @@ describe('TagsService', () => {
       });
 
       expect(tagsService.update(-1, updateTagDto)).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 

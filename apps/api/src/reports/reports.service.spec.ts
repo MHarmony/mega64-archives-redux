@@ -92,7 +92,7 @@ describe('ReportsService', () => {
   describe('when finding a report by guid', () => {
     it('should throw an exception if the guid cannot be found', async () => {
       expect(reportsService.findOneByGuid(uuidv4())).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 
@@ -110,7 +110,7 @@ describe('ReportsService', () => {
       });
 
       expect(reportsService.update(-1, updateReportDto)).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 

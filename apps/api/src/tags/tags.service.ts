@@ -18,7 +18,7 @@ export class TagsService {
    * @param tagsRepository - The TagsRepository.
    */
   public constructor(
-    @InjectRepository(Tag) private readonly tagsRepository: Repository<Tag>
+    @InjectRepository(Tag) private readonly tagsRepository: Repository<Tag>,
   ) {}
 
   /**
@@ -56,7 +56,7 @@ export class TagsService {
 
     if (!foundTag) {
       throw new NotFoundException(
-        `The tag with content ${content} was not found.`
+        `The tag with content ${content} was not found.`,
       );
     }
 

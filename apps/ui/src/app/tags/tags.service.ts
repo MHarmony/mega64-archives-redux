@@ -48,7 +48,7 @@ export class TagsService {
    */
   public async findOneByContent(content: string): Promise<Tag> {
     return firstValueFrom(
-      this.httpClient.get<Tag>(`/api/tags/byContent/${content}`)
+      this.httpClient.get<Tag>(`/api/tags/byContent/${content}`),
     );
   }
 
@@ -73,7 +73,7 @@ export class TagsService {
    */
   public async update(id: number, updateTagDto: UpdateTag): Promise<Tag> {
     return firstValueFrom(
-      this.httpClient.patch<Tag>(`/api/tags/${id}`, updateTagDto)
+      this.httpClient.patch<Tag>(`/api/tags/${id}`, updateTagDto),
     );
   }
 

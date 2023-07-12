@@ -148,7 +148,7 @@ export class TagsController {
   @UseGuards(AuthGuard('jwt'))
   @Get('/byContent/:content')
   public async findOneByContent(
-    @Param('content') content: string
+    @Param('content') content: string,
   ): Promise<Tag> {
     return this.tagsService.findOneByContent(content);
   }
@@ -253,7 +253,7 @@ export class TagsController {
   @Patch(':id')
   public async update(
     @Param('id') id: string,
-    @Body() updateTagDto: UpdateTagDto
+    @Body() updateTagDto: UpdateTagDto,
   ): Promise<Tag> {
     return this.tagsService.update(+id, updateTagDto);
   }

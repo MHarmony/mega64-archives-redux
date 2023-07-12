@@ -18,7 +18,7 @@ export class UsersService {
    * @param usersRepository - The UsersRepository.
    */
   public constructor(
-    @InjectRepository(User) private readonly usersRepository: Repository<User>
+    @InjectRepository(User) private readonly usersRepository: Repository<User>,
   ) {}
 
   /**
@@ -56,7 +56,7 @@ export class UsersService {
 
     if (!foundUser) {
       throw new NotFoundException(
-        `The user with email ${email} was not found.`
+        `The user with email ${email} was not found.`,
       );
     }
 

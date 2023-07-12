@@ -33,7 +33,7 @@ export class UsersService {
    */
   public async create(createUserDto: CreateUser): Promise<User> {
     return firstValueFrom(
-      this.httpClient.post<User>('/api/users', createUserDto)
+      this.httpClient.post<User>('/api/users', createUserDto),
     );
   }
 
@@ -55,7 +55,7 @@ export class UsersService {
    */
   public async findOneByEmail(email: string): Promise<User> {
     return firstValueFrom(
-      this.httpClient.get<User>(`/api/users/byEmail/${email}`)
+      this.httpClient.get<User>(`/api/users/byEmail/${email}`),
     );
   }
 
@@ -89,7 +89,7 @@ export class UsersService {
    */
   public async update(id: number, updateUserDto: UpdateUser): Promise<User> {
     return firstValueFrom(
-      this.httpClient.patch<User>(`/api/users/${id}`, updateUserDto)
+      this.httpClient.patch<User>(`/api/users/${id}`, updateUserDto),
     );
   }
 

@@ -63,7 +63,7 @@ describe('ReportsController', () => {
         forbidNonWhitelisted: true,
         transform: true,
         whitelist: true,
-      })
+      }),
     );
 
     await app.init();

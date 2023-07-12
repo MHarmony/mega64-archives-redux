@@ -18,7 +18,7 @@ export class FavoritesService {
    */
   public constructor(
     @InjectRepository(Favorite)
-    private readonly favoritesRepository: Repository<Favorite>
+    private readonly favoritesRepository: Repository<Favorite>,
   ) {}
 
   /**

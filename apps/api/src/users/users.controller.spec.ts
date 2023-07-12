@@ -52,7 +52,7 @@ describe('UsersController', () => {
         forbidNonWhitelisted: true,
         transform: true,
         whitelist: true,
-      })
+      }),
     );
 
     await app.init();

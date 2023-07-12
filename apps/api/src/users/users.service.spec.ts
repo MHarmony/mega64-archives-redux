@@ -72,7 +72,7 @@ describe('UsersService', () => {
   describe('when finding a user by email', () => {
     it('should throw an exception if the email cannot be found', async () => {
       expect(usersService.findOneByEmail('john.doe@doe.com')).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 
@@ -91,7 +91,7 @@ describe('UsersService', () => {
       });
 
       expect(usersService.update(-1, updateUserDto)).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 

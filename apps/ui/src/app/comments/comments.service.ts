@@ -28,7 +28,7 @@ export class CommentsService {
    */
   public async create(createCommentDto: CreateComment): Promise<Comment> {
     return firstValueFrom(
-      this.httpClient.post<Comment>('/api/comments', createCommentDto)
+      this.httpClient.post<Comment>('/api/comments', createCommentDto),
     );
   }
 
@@ -50,7 +50,7 @@ export class CommentsService {
    */
   public async findOneByContent(content: string): Promise<Comment> {
     return firstValueFrom(
-      this.httpClient.get<Comment>(`/api/comments/byContent/${content}`)
+      this.httpClient.get<Comment>(`/api/comments/byContent/${content}`),
     );
   }
 
@@ -63,7 +63,7 @@ export class CommentsService {
    */
   public async findOneById(id: number): Promise<Comment> {
     return firstValueFrom(
-      this.httpClient.get<Comment>(`/api/comments/byId/${id}`)
+      this.httpClient.get<Comment>(`/api/comments/byId/${id}`),
     );
   }
 
@@ -77,10 +77,10 @@ export class CommentsService {
    */
   public async update(
     id: number,
-    updateCommentDto: UpdateComment
+    updateCommentDto: UpdateComment,
   ): Promise<Comment> {
     return firstValueFrom(
-      this.httpClient.patch<Comment>(`/api/comments/${id}`, updateCommentDto)
+      this.httpClient.patch<Comment>(`/api/comments/${id}`, updateCommentDto),
     );
   }
 

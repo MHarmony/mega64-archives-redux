@@ -40,7 +40,7 @@ export class AuthController {
    */
   constructor(
     private readonly authService: AuthService,
-    private strategy: MagicLoginStrategy
+    private strategy: MagicLoginStrategy,
   ) {}
 
   /**
@@ -79,7 +79,7 @@ export class AuthController {
   public async login(
     @Req() req: Request,
     @Res() res: Response,
-    @Body() passwordlessLoginDto: PasswordlessLoginDto
+    @Body() passwordlessLoginDto: PasswordlessLoginDto,
   ): Promise<void> {
     await this.authService.validateUser(passwordlessLoginDto.destination);
 
@@ -114,7 +114,7 @@ export class AuthController {
   @UseGuards(AuthGuard('magiclogin'))
   @Get('login/callback')
   public async callback(
-    @Req() req: Request
+    @Req() req: Request,
   ): Promise<{ access_token: string }> {
     return this.authService.generateTokens(req.user as User);
   }

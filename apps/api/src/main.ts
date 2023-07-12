@@ -22,7 +22,7 @@ async function bootstrap() {
       forbidNonWhitelisted: true,
       transform: true,
       whitelist: true,
-    })
+    }),
   );
   app.useLogger(SentryService.SentryServiceInstance());
   app.use(helmet());
@@ -38,7 +38,7 @@ async function bootstrap() {
         scheme: 'bearer',
         type: 'http',
       },
-      'jwt'
+      'jwt',
     )
     .setContact('MHarmony', 'https://mharmony.io', 'contact@mharmony.io')
     .setTitle('Mega64 Archives Redux API')

@@ -18,7 +18,7 @@ export class AuthService {
    */
   public constructor(
     private readonly jwtService: JwtService,
-    private readonly usersService: UsersService
+    private readonly usersService: UsersService,
   ) {}
 
   /**
@@ -53,7 +53,7 @@ export class AuthService {
       user = await this.usersService.findOneByEmail(email);
     } catch {
       throw new UnauthorizedException(
-        `The user with email ${email} could not be validated.`
+        `The user with email ${email} could not be validated.`,
       );
     }
 

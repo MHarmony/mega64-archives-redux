@@ -83,7 +83,7 @@ describe('CommentsService', () => {
   describe('when finding a comment by id', () => {
     it('should throw an exception if the id cannot be found', async () => {
       expect(commentsService.findOneById(-1)).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 
@@ -97,7 +97,7 @@ describe('CommentsService', () => {
   describe('when finding a comment by content', () => {
     it('should throw an exception if the content cannot be found', async () => {
       expect(commentsService.findOneByContent('reeee')).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 
@@ -115,7 +115,7 @@ describe('CommentsService', () => {
       });
 
       expect(commentsService.update(-1, updateCommentDto)).rejects.toThrow(
-        NotFoundException
+        NotFoundException,
       );
     });
 

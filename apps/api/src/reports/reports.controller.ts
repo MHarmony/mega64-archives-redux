@@ -78,7 +78,7 @@ export class ReportsController {
   @UseGuards(AuthGuard('jwt'))
   @Post()
   public async create(
-    @Body() createReportDto: CreateReportDto
+    @Body() createReportDto: CreateReportDto,
   ): Promise<Report> {
     return this.reportsService.create(createReportDto);
   }
@@ -255,7 +255,7 @@ export class ReportsController {
   @Patch(':id')
   public async update(
     @Param('id') id: string,
-    @Body() updateReportDto: UpdateReportDto
+    @Body() updateReportDto: UpdateReportDto,
   ): Promise<Report> {
     return this.reportsService.update(+id, updateReportDto);
   }

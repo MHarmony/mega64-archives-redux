@@ -19,7 +19,7 @@ export class ReportsService {
    */
   public constructor(
     @InjectRepository(Report)
-    private readonly reportsRepository: Repository<Report>
+    private readonly reportsRepository: Repository<Report>,
   ) {}
 
   /**
@@ -57,7 +57,7 @@ export class ReportsService {
 
     if (!foundReport) {
       throw new NotFoundException(
-        `The report with associated guid ${guid} was not found.`
+        `The report with associated guid ${guid} was not found.`,
       );
     }
 
@@ -94,7 +94,7 @@ export class ReportsService {
    */
   public async update(
     id: number,
-    updateReportDto: UpdateReportDto
+    updateReportDto: UpdateReportDto,
   ): Promise<Report> {
     const foundReport = await this.findOneById(id);
 

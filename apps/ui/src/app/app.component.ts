@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
   public constructor(
     private meta: Meta,
     private primeNgConfig: PrimeNGConfig,
-    private usersService: UsersService
+    private usersService: UsersService,
   ) {
     this.currentUser = usersService.getCurrentUser();
   }

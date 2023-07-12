@@ -28,7 +28,7 @@ export class RepliesService {
    */
   public async create(createReplyDto: CreateReply): Promise<Reply> {
     return firstValueFrom(
-      this.httpClient.post<Reply>('/api/replies', createReplyDto)
+      this.httpClient.post<Reply>('/api/replies', createReplyDto),
     );
   }
 
@@ -50,7 +50,7 @@ export class RepliesService {
    */
   public async findOneByContent(content: string): Promise<Reply> {
     return firstValueFrom(
-      this.httpClient.get<Reply>(`/api/replies/byContent/${content}`)
+      this.httpClient.get<Reply>(`/api/replies/byContent/${content}`),
     );
   }
 
@@ -63,7 +63,7 @@ export class RepliesService {
    */
   public async findOneById(id: number): Promise<Reply> {
     return firstValueFrom(
-      this.httpClient.get<Reply>(`/api/replies/byId/${id}`)
+      this.httpClient.get<Reply>(`/api/replies/byId/${id}`),
     );
   }
 
@@ -77,7 +77,7 @@ export class RepliesService {
    */
   public async update(id: number, updateReplyDto: UpdateReply): Promise<Reply> {
     return firstValueFrom(
-      this.httpClient.patch<Reply>(`/api/replies/${id}`, updateReplyDto)
+      this.httpClient.patch<Reply>(`/api/replies/${id}`, updateReplyDto),
     );
   }
 

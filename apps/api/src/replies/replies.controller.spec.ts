@@ -72,7 +72,7 @@ describe('RepliesController', () => {
         forbidNonWhitelisted: true,
         transform: true,
         whitelist: true,
-      })
+      }),
     );
 
     await app.init();

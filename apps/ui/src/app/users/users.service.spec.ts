@@ -88,7 +88,7 @@ describe('UsersService', () => {
       .then((user) => expect(user).toEqual(mockUser));
 
     const req = httpTestingController.expectOne(
-      encodeURI('/api/users/byEmail/john.doe@gmail.com')
+      encodeURI('/api/users/byEmail/john.doe@gmail.com'),
     );
 
     expect(req.request.method).toEqual('GET');

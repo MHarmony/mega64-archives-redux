@@ -148,7 +148,7 @@ export class RepliesController {
   @UseGuards(AuthGuard('jwt'))
   @Get('/byContent/:content')
   public async findOneByContent(
-    @Param('content') content: string
+    @Param('content') content: string,
   ): Promise<Reply> {
     return this.repliesService.findOneByContent(content);
   }
@@ -254,7 +254,7 @@ export class RepliesController {
   @Patch(':id')
   public async update(
     @Param('id') id: string,
-    @Body() updateReplyDto: UpdateReplyDto
+    @Body() updateReplyDto: UpdateReplyDto,
   ): Promise<Reply> {
     return this.repliesService.update(+id, updateReplyDto);
   }
