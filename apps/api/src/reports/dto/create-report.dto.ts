@@ -6,7 +6,7 @@ import {
   IsString,
   IsUUID,
   MaxLength,
-} from 'class-validator';
+} from 'class-validator/types';
 import { v4 as uuidv4 } from 'uuid';
 import { IncludeUserDto } from '../../users/dto/include-user.dto';
 

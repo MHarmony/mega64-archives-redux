@@ -5,7 +5,7 @@ import {
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { CreateFavorite, Favorite, MediaType, UserType } from '@mega64/common';
-import { plainToInstance } from 'class-transformer';
+import { plainToInstance } from 'class-transformer/types';
 import { v4 as uuidv4 } from 'uuid';
 import { FavoritesService } from './favorites.service';
 

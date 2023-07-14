@@ -9,7 +9,7 @@ import {
   Length,
   MaxLength,
   NotContains,
-} from 'class-validator';
+} from 'class-validator/types';
 
 /**
  * The Data transfer object (DTO) for updating a user.

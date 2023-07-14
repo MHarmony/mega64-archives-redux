@@ -3,7 +3,7 @@ import { NestApplication } from '@nestjs/core';
 import { AuthGuard } from '@nestjs/passport';
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { plainToInstance } from 'class-transformer';
+import { plainToInstance } from 'class-transformer/types';
 import request from 'supertest';
 import { Repository } from 'typeorm';
 import TestDataSource from '../../tests/test.datasource';

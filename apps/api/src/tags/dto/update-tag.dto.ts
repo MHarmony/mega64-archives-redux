@@ -1,6 +1,6 @@
 import { UpdateTag } from '@mega64/common';
 import { ApiProperty } from '@nestjs/swagger';
-import { IsAlphanumeric, IsString, Length } from 'class-validator';
+import { IsAlphanumeric, IsString, Length } from 'class-validator/types';
 
 /**
  * The Data transfer object (DTO) for udpating a tag.

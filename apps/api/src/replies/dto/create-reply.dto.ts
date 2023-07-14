@@ -5,7 +5,7 @@ import {
   IsNotEmptyObject,
   IsString,
   MaxLength,
-} from 'class-validator';
+} from 'class-validator/types';
 import { IncludeCommentDto } from '../../comments/dto/include-comment.dto';
 import { IncludeUserDto } from '../../users/dto/include-user.dto';
 

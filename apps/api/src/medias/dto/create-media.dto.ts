@@ -1,6 +1,6 @@
 import { CreateMedia, MediaType } from '@mega64/common';
 import { ApiProperty } from '@nestjs/swagger';
-import { Type } from 'class-transformer';
+import { Type } from 'class-transformer/types';
 import {
   IsAlphanumeric,
   IsAscii,
@@ -10,7 +10,7 @@ import {
   IsString,
   IsUrl,
   Length,
-} from 'class-validator';
+} from 'class-validator/types';
 
 /**
  * The Data transfer object (DTO) for creating media.

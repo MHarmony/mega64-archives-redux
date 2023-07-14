@@ -1,7 +1,7 @@
 import { NotFoundException } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { plainToInstance } from 'class-transformer';
+import { plainToInstance } from 'class-transformer/types';
 import { Repository } from 'typeorm';
 import TestDataSource from '../../tests/test.datasource';
 import { User } from '../users/entities/user.entity';

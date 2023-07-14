@@ -1,6 +1,6 @@
 import { CreateFavorite } from '@mega64/common';
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmptyObject } from 'class-validator';
+import { IsNotEmptyObject } from 'class-validator/types';
 import { IncludeMediaDto } from '../../medias/dto/include-media.dto';
 import { Media } from '../../medias/entities/media.entity';
 import { IncludeUserDto } from '../../users/dto/include-user.dto';

@@ -1,6 +1,6 @@
 import { UpdateReply } from '@mega64/common';
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsString, MaxLength } from 'class-validator';
+import { IsNotEmpty, IsString, MaxLength } from 'class-validator/types';
 
 /**
  * The Data transfer object (DTO) for udpating a reply.

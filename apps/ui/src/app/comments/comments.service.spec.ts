@@ -10,7 +10,7 @@ import {
   UpdateComment,
   UserType,
 } from '@mega64/common';
-import { plainToInstance } from 'class-transformer';
+import { plainToInstance } from 'class-transformer/types';
 import { v4 as uuidv4 } from 'uuid';
 import { CommentsService } from './comments.service';
 

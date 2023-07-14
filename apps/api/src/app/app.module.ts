@@ -1,11 +1,11 @@
 import { CacheInterceptor, CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
+import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core/constants';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SentryModule } from '@ntegral/nestjs-sentry';
-import joi from 'joi';
+import { number, object, string } from 'joi';
 import { AuthModule } from '../auth/auth.module';
 import { CommentsModule } from '../comments/comments.module';
 import configuration from '../config/configuration';
@@ -31,29 +31,28 @@ import { UsersModule } from '../users/users.module';
       validationOptions: {
         abortEarly: true,
       },
-      validationSchema: joi.object({
-        AUTH_CALLBACK_URL: joi
-          .string()
-          .default('http://localhost:3000/auth/login/callback'),
-        CACHE_MAX_ITEMS: joi.number().default(50),
-        CACHE_TTL_MS: joi.number().default(60000),
-        DATABASE_HOST: joi.string().default('localhost'),
-        DATABASE_NAME: joi.string().default('mega64_archives_redux'),
-        DATABASE_PASSWORD: joi.string().required(),
-        DATABASE_PORT: joi.number().default(3306),
-        DATABASE_USER: joi.string().required(),
-        JWT_EXPIRATION: joi.string().default('1h'),
-        JWT_SECRET: joi.string().required(),
-        MAGIC_LINK_EXPIRATION: joi.string().default('5m'),
-        MAGIC_LINK_SECRET: joi.string().required(),
-        NODE_ENV: joi
-          .string()
+      validationSchema: object({
+        AUTH_CALLBACK_URL: string().default(
+          'http://localhost:3000/auth/login/callback',
+        ),
+        CACHE_MAX_ITEMS: number().default(50),
+        CACHE_TTL_MS: number().default(60000),
+        DATABASE_HOST: string().default('localhost'),
+        DATABASE_NAME: string().default('mega64_archives_redux'),
+        DATABASE_PASSWORD: string().required(),
+        DATABASE_PORT: number().default(3306),
+        DATABASE_USER: string().required(),
+        JWT_EXPIRATION: string().default('1h'),
+        JWT_SECRET: string().required(),
+        MAGIC_LINK_EXPIRATION: string().default('5m'),
+        MAGIC_LINK_SECRET: string().required(),
+        NODE_ENV: string()
           .valid('development', 'test', 'production')
           .default('development'),
-        PORT: joi.number().default(3000),
-        SENTRY_DSN: joi.string().required(),
-        THROTTLE_LIMIT: joi.number().default(20),
-        THROTTLE_TTL: joi.number().default(60),
+        PORT: number().default(3000),
+        SENTRY_DSN: string().required(),
+        THROTTLE_LIMIT: number().default(20),
+        THROTTLE_TTL: number().default(60),
       }),
     }),
     CacheModule.registerAsync({
